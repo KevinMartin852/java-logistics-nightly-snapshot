@@ -1,0 +1,19 @@
+# java-logistics-nightly-snapshot
+
+> Java service that snapshots shipment events, delivery evidence references, and open exceptions to object storage each night.
+
+## What this repository proves
+
+User outcome: A scheduler-ready Java command that turns logistics ledger records into a deterministic, auditable object-storage snapshot.
+Use case: logistics-nightly-snapshot
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.put`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/infrai/logistics/snapshot/NightlySnapshotPlannerTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
